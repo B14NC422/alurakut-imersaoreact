@@ -2,6 +2,7 @@ import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { AlurakutStyles } from './src/lib/AlurakutCommons'
 
 const GlobalStyle = createGlobalStyle`
+
   * {
     margin: 0;
     padding: 0;
@@ -9,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: #DCDCDC;
+    background-color: #d8e7f9;
     font-family: sans-serif;
   }
 

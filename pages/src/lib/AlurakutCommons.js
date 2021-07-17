@@ -54,7 +54,7 @@ export function AlurakutMenu({ githubUser }) {
 }
 AlurakutMenu.Wrapper = styled.header`
   width: 100%;
-  background-color: #A9A9A9;
+  background-color: #308BC5;
   .alurakutMenuProfileSidebar {
     background: white;
     position: fixed;
@@ -93,7 +93,7 @@ AlurakutMenu.Wrapper = styled.header`
     }
   }
   .container {
-    background-color: #A9A9A9;
+    background-color: #308BC5;
     padding: 7px 16px;
     max-width: 1110px;
     margin: auto;
@@ -140,7 +140,7 @@ AlurakutMenu.Wrapper = styled.header`
     }
     input {
       color: #363636;
-      background: #D3D3D3;
+      background: #5579A1;
       padding: 10px 42px;
       border: 0;
       background-image: url(${`${BASE_URL}/icons/search.svg`});
@@ -156,7 +156,7 @@ AlurakutMenu.Wrapper = styled.header`
   }
 `;
 AlurakutMenu.Logo = styled.img`
-  background-color: #A9A9A9;
+  background-color: #ffffff;
   padding: 9px 14px;
   border-radius: 1000px;
   height: 34px;
@@ -255,7 +255,7 @@ export function OrkutNostalgicIconSet(props) {
           </span>
           <span className="OrkutNostalgicIconSet__number" style={{ gridArea: 'number' }}>
             <img key={`orkut__icon_set__${slug}_img`} className="OrkutNostalgicIconSet__iconSample" src={`https://alurakut.vercel.app/icons/${icon}.svg`} />
-            {props[slug] ? props[slug] : 3}
+            {props[slug] ? props[slug] : 10}
           </span>
         </li>
       ))}
@@ -264,14 +264,14 @@ export function OrkutNostalgicIconSet(props) {
         { name: 'Legal', slug: 'legal', icon: 'cool' },
         { name: 'Sexy', slug: 'sexy', icon: 'heart' },
       ].map(({ name, slug, icon }) => {
-        const total = props[slug] ? props[slug] : 2;
+        const total = props[slug] ? props[slug] : 5;
         return (
           <li key={`orkut__icon_set__${slug}`}>
             <span className="OrkutNostalgicIconSet__title">
               {name}
             </span>
             <span className="OrkutNostalgicIconSet__iconComplex" className="OrkutNostalgicIconSet__number" style={{ gridArea: 'number' }}>
-              {[0, 1, 2].map((_, index) => {
+              {[0, 1, 2, 3, 4].map((_, index) => {
                 const isHeartActive = index <= (total - 1);
                 return <img key={`orkut__icon_set__${slug}_img_${index}`} src={`https://alurakut.vercel.app/icons/${icon}.svg`} style={{ marginRight: '2px', opacity: isHeartActive ? 1 : '0.5' }} />
               })}
@@ -416,7 +416,7 @@ const AlurakutLoginScreen = css`
           color: var(--colorPrimary);
         }
         input {
-          width: 90%;
+          width: 100%;
           display: block;
           border: 1px solid var(--textQuarternaryColor);
           padding: 12px;
@@ -431,7 +431,7 @@ const AlurakutLoginScreen = css`
           border: 0;
           padding: 12px;
           border-radius: var(--commonRadius);
-          background-color: var(--colorPrimary);
+          background-color: #308BC5;
           color: var(--textSecondaryColor);
         }
       }
